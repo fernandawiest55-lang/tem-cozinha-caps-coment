@@ -1,0 +1,159 @@
+/* ===== RECEITAS PAGE ===== */
+
+.ia-loading-box {
+    /* deixa responsivo em telas menores */
+  background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  color: var(--branco);
+}
+
+.ia-loading-inner {
+    /* deixa responsivo em telas menores */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ia-spinner {
+    /* estilização principal da página */
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-top-color: var(--branco);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+/* INGREDIENTES NO MODAL */
+.modal-ingredientes {
+    /* animação simples pra deixar mais bonito */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 20px;
+}
+
+.modal-ingrediente-tag {
+    /* deixa responsivo em telas menores */
+  background: var(--creme-escuro);
+  color: var(--verde-escuro);
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.modal-passos {
+    /* animação simples pra deixar mais bonito */
+  list-style: none;
+  counter-reset: passos;
+}
+
+.modal-passos li {
+    /* estilização principal da página */
+  counter-increment: passos;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--texto-medio);
+}
+
+.modal-passos li::before {
+    /* deixa responsivo em telas menores */
+  content: counter(passos);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: var(--verde-escuro);
+  color: var(--branco);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.modal-meta-grid {
+    /* deixa responsivo em telas menores */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.modal-meta-item {
+    /* centraliza os elementos */
+  background: var(--creme);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+.modal-meta-label {
+    /* estilização principal da página */
+  font-size: 11px;
+  color: var(--texto-claro);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.modal-meta-value {
+    /* estilização principal da página */
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--texto-escuro);
+}
+
+.modal-actions {
+    /* deixa responsivo em telas menores */
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--creme-escuro);
+}
+
+/* AVALIAÇÃO NO MODAL */
+.avaliacao-form {
+    /* animação simples pra deixar mais bonito */
+  background: var(--creme);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.avaliacao-form h4 {
+    /* deixa responsivo em telas menores */
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.avaliacao-stars {
+    /* animação simples pra deixar mais bonito */
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.avaliacao-stars button {
+    /* centraliza os elementos */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.1s;
+  padding: 2px;
+}
+
+.avaliacao-stars button:hover {
+    /* deixa responsivo em telas menores */
+  transform: scale(1.2);
+}

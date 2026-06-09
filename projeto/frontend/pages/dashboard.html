@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Tem na Cozinha</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- estrutura principal da tela -->
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+    <!-- estrutura principal da tela -->
+        <div class="logo-text"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/hpD8fpzA1S7OpnvEchI20-GaalDF6ed9jeblniAz8L5IjY924ip0.jpg" alt="Tem na Cozinha" class="logo-img"> Tem na Cozinha</div>
+    <!-- estrutura principal da tela -->
+        <div class="logo-sub">Smart Kitchen</div>
+    <!-- estrutura principal da tela -->
+      </div>
+      <div class="sidebar-user">
+    <!-- estrutura principal da tela -->
+        <div class="user-avatar" id="sidebarAvatar">?</div>
+    <!-- estrutura principal da tela -->
+        <div class="user-info">
+    <!-- estrutura principal da tela -->
+          <div class="user-name" id="sidebarName">Carregando...</div>
+    <!-- estrutura principal da tela -->
+          <div class="user-role">Membro</div>
+    <!-- estrutura principal da tela -->
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Principal</div>
+    <!-- estrutura principal da tela -->
+        <a href="dashboard.html" class="nav-item active">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Dashboard
+        </a>
+        <a href="receitas.html" class="nav-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          Receitas
+        </a>
+        <a href="despensa.html" class="nav-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          Despensa
+        </a>
+        <a href="lista-compras.html" class="nav-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Lista de Compras
+        </a>
+        <div class="nav-section-title">Pessoal</div>
+    <!-- estrutura principal da tela -->
+        <a href="favoritos.html" class="nav-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          Favoritos
+        </a>
+        <a href="historico.html" class="nav-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Histórico
+        </a>
+        <a href="perfil.html" class="nav-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Meu Perfil
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+    <!-- estrutura principal da tela -->
+        <button class="nav-item" id="btnLogout" style="width:100%;background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.7);">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Sair
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+      <!-- TOP BAR -->
+      <div class="top-bar">
+    <!-- estrutura principal da tela -->
+        <div>
+    <!-- estrutura principal da tela -->
+          <h1 class="page-title">Dashboard</h1>
+          <p class="page-subtitle" id="greetingText">Bom dia! O que vamos cozinhar hoje?</p>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;">
+    <!-- estrutura principal da tela -->
+          <button class="btn-icon mobile-menu-btn" id="mobileMenuBtn">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </button>
+          <a href="receitas.html" class="btn-laranja" style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;color:white;">
+            <span>🤖</span> Buscar Receitas
+          </a>
+        </div>
+      </div>
+
+      <!-- STATS CARDS -->
+      <div class="stats-grid">
+    <!-- estrutura principal da tela -->
+        <div class="stat-card">
+    <!-- estrutura principal da tela -->
+          <div class="stat-icon" style="background:#d1fae5;color:#065f46;">📦</div>
+    <!-- estrutura principal da tela -->
+          <div class="stat-info">
+    <!-- estrutura principal da tela -->
+            <div class="stat-value" id="statIngredientes">0</div>
+    <!-- estrutura principal da tela -->
+            <div class="stat-label">Ingredientes</div>
+    <!-- estrutura principal da tela -->
+          </div>
+        </div>
+        <div class="stat-card">
+    <!-- estrutura principal da tela -->
+          <div class="stat-icon" style="background:#fef3c7;color:#92400e;">🍽️</div>
+    <!-- estrutura principal da tela -->
+          <div class="stat-info">
+    <!-- estrutura principal da tela -->
+            <div class="stat-value" id="statReceitas">0</div>
+    <!-- estrutura principal da tela -->
+            <div class="stat-label">Receitas Sugeridas</div>
+    <!-- estrutura principal da tela -->
+          </div>
+        </div>
+        <div class="stat-card">
+    <!-- estrutura principal da tela -->
+          <div class="stat-icon" style="background:#fee2e2;color:#991b1b;">❤️</div>
+    <!-- estrutura principal da tela -->
+          <div class="stat-info">
+    <!-- estrutura principal da tela -->
+            <div class="stat-value" id="statFavoritos">0</div>
+    <!-- estrutura principal da tela -->
+            <div class="stat-label">Favoritos</div>
+    <!-- estrutura principal da tela -->
+          </div>
+        </div>
+        <div class="stat-card">
+    <!-- estrutura principal da tela -->
+          <div class="stat-icon" style="background:#ede9fe;color:#5b21b6;">🛒</div>
+    <!-- estrutura principal da tela -->
+          <div class="stat-info">
+    <!-- estrutura principal da tela -->
+            <div class="stat-value" id="statLista">0</div>
+    <!-- estrutura principal da tela -->
+            <div class="stat-label">Itens na Lista</div>
+    <!-- estrutura principal da tela -->
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTENT GRID -->
+      <div class="dash-grid">
+    <!-- estrutura principal da tela -->
+
+        <!-- RECEITAS SUGERIDAS -->
+        <div class="dash-card" style="grid-column: span 2;">
+    <!-- estrutura principal da tela -->
+          <div class="dash-card-header">
+    <!-- estrutura principal da tela -->
+            <h3>Receitas Sugeridas pela IA</h3>
+            <a href="receitas.html" class="link-ver-mais">Ver todas →</a>
+          </div>
+          <div id="receitasList" class="receitas-mini-grid">
+    <!-- estrutura principal da tela -->
+            <div class="loading-placeholder">🤖 Gerando sugestões...</div>
+    <!-- estrutura principal da tela -->
+          </div>
+        </div>
+
+        <!-- DESPENSA RÁPIDA -->
+        <div class="dash-card">
+    <!-- estrutura principal da tela -->
+          <div class="dash-card-header">
+    <!-- estrutura principal da tela -->
+            <h3>Minha Despensa</h3>
+            <a href="despensa.html" class="link-ver-mais">Gerenciar →</a>
+          </div>
+          <div id="despensaList">
+    <!-- estrutura principal da tela -->
+            <div class="loading-placeholder">Carregando...</div>
+    <!-- estrutura principal da tela -->
+          </div>
+          <a href="despensa.html" class="btn-secondary" style="margin-top:16px;display:block;text-align:center;padding:10px;">+ Adicionar ingrediente</a>
+        </div>
+
+        <!-- LISTA DE COMPRAS RÁPIDA -->
+        <div class="dash-card">
+    <!-- estrutura principal da tela -->
+          <div class="dash-card-header">
+    <!-- estrutura principal da tela -->
+            <h3>Lista de Compras</h3>
+            <a href="lista-compras.html" class="link-ver-mais">Ver lista →</a>
+          </div>
+          <div id="listaRapida">
+    <!-- estrutura principal da tela -->
+            <div class="loading-placeholder">Carregando...</div>
+    <!-- estrutura principal da tela -->
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receitas - Tem na Cozinha</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/receitas.css">
+</head>
+<body>
+<div class="app-layout">
+    <!-- estrutura principal da tela -->
+  <!-- SIDEBAR (igual) -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo"><div class="logo-text"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/hpD8fpzA1S7OpnvEchI20-GaalDF6ed9jeblniAz8L5IjY924ip0.jpg" alt="Tem na Cozinha" class="logo-img"> Tem na Cozinha</div><div class="logo-sub">Smart Kitchen</div></div>
+    <!-- estrutura principal da tela -->
+    <div class="sidebar-user">
+    <!-- estrutura principal da tela -->
+      <div class="user-avatar" id="sidebarAvatar">?</div>
+    <!-- estrutura principal da tela -->
+      <div class="user-info"><div class="user-name" id="sidebarName">...</div><div class="user-role">Membro</div></div>
+    <!-- estrutura principal da tela -->
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-title">Principal</div>
+    <!-- estrutura principal da tela -->
+      <a href="dashboard.html" class="nav-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a>
+      <a href="receitas.html" class="nav-item active"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>Receitas</a>
+      <a href="despensa.html" class="nav-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Despensa</a>
+      <a href="lista-compras.html" class="nav-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>Lista de Compras</a>
+      <div class="nav-section-title">Pessoal</div>
+    <!-- estrutura principal da tela -->
+      <a href="favoritos.html" class="nav-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Favoritos</a>
+      <a href="historico.html" class="nav-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Histórico</a>
+      <a href="perfil.html" class="nav-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Meu Perfil</a>
+    </nav>
+    <div class="sidebar-footer">
+    <!-- estrutura principal da tela -->
+      <button class="nav-item" id="btnLogout" style="width:100%;background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.7);">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Sair
+      </button>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="top-bar">
+    <!-- estrutura principal da tela -->
+      <div>
+    <!-- estrutura principal da tela -->
+        <h1 class="page-title">Receitas</h1>
+        <p class="page-subtitle">Sugestões personalizadas pela IA com seus ingredientes</p>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;">
+    <!-- estrutura principal da tela -->
+        <button class="btn-icon mobile-menu-btn" id="mobileMenuBtn">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+        <button class="btn-laranja" id="btnBuscarIA" style="padding:12px 20px;border-radius:10px;font-weight:600;font-size:14px;">
+          🤖 Buscar com IA
+        </button>
+      </div>
+    </div>
+
+    <!-- FILTROS -->
+    <div class="search-bar">
+    <!-- estrutura principal da tela -->
+      <div class="search-input-wrap">
+    <!-- estrutura principal da tela -->
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" placeholder="Buscar receitas...">
+      </div>
+      <select id="filtroCategoria" style="padding:12px 16px;border:2px solid var(--creme-escuro);border-radius:10px;font-size:14px;background:var(--branco);color:var(--texto-escuro);cursor:pointer;">
+        <option value="">Todas as categorias</option>
+        <option value="cafe">Café da manhã</option>
+        <option value="almoco">Almoço</option>
+        <option value="jantar">Jantar</option>
+        <option value="lanche">Lanche</option>
+        <option value="sobremesa">Sobremesa</option>
+      </select>
+      <select id="filtroDificuldade" style="padding:12px 16px;border:2px solid var(--creme-escuro);border-radius:10px;font-size:14px;background:var(--branco);color:var(--texto-escuro);cursor:pointer;">
+        <option value="">Qualquer dificuldade</option>
+        <option value="Fácil">Fácil</option>
+        <option value="Médio">Médio</option>
+        <option value="Difícil">Difícil</option>
+      </select>
+    </div>
+
+    <!-- IA LOADING -->
+    <div id="iaLoadingBox" style="display:none;" class="ia-loading-box">
+    <!-- estrutura principal da tela -->
+      <div class="ia-loading-inner">
+    <!-- estrutura principal da tela -->
+        <div class="ia-spinner"></div>
+    <!-- estrutura principal da tela -->
+        <div>
+    <!-- estrutura principal da tela -->
+          <div style="font-weight:600;font-size:15px;">Consultando IA...</div>
+    <!-- estrutura principal da tela -->
+          <div style="font-size:13px;color:var(--texto-claro);margin-top:2px;">Analisando seus ingredientes e perfil alimentar</div>
+    <!-- estrutura principal da tela -->
+        </div>
+      </div>
+    </div>
+
+    <!-- RECEITAS -->
+    <div id="receitasGrid" class="receitas-grid">
+    <!-- estrutura principal da tela -->
+      <div class="loading-placeholder" style="grid-column:1/-1;padding:60px;">🍽️ Carregando receitas...</div>
+    <!-- estrutura principal da tela -->
+    </div>
+  </main>
+</div>
+
+<!-- MODAL RECEITA -->
+<div class="modal-overlay" id="receitaModal">
+    <!-- estrutura principal da tela -->
+  <div class="modal" style="max-width:600px;">
+    <!-- estrutura principal da tela -->
+    <div class="modal-header">
+    <!-- estrutura principal da tela -->
+      <h2 class="modal-title" id="modalTitulo">Receita</h2>
+      <button class="btn-icon" id="fecharModal">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="modalBody" style="max-height:70vh;overflow-y:auto;"></div>
+    <!-- estrutura principal da tela -->
+  </div>
+</div>
+
+<script src="../js/auth.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/receitas.js"></script>
+</body>
+</html>

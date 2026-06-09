@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Senha - Tem na Cozinha</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body class="auth-body">
+  <div class="auth-layout">
+    <!-- estrutura principal da tela -->
+    <div class="auth-left">
+    <!-- estrutura principal da tela -->
+      <div class="auth-left-content">
+    <!-- estrutura principal da tela -->
+        <a href="index.html" class="auth-logo"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/hpD8fpzA1S7OpnvEchI20-GaalDF6ed9jeblniAz8L5IjY924ip0.jpg" alt="Tem na Cozinha" class="logo-img"><span>Tem na Cozinha</span></a>
+        <div class="auth-illustration">
+    <!-- estrutura principal da tela -->
+          <div class="illus-circle"><span class="illus-emoji">🔐</span></div>
+    <!-- estrutura principal da tela -->
+        </div>
+        <h2 class="auth-left-title">Esqueceu sua senha?</h2>
+        <p class="auth-left-desc">Não se preocupe! Informe seu e-mail e enviaremos as instruções para redefinir sua senha.</p>
+      </div>
+    </div>
+    <div class="auth-right">
+    <!-- estrutura principal da tela -->
+      <div class="auth-form-wrapper">
+    <!-- estrutura principal da tela -->
+        <div class="auth-header">
+    <!-- estrutura principal da tela -->
+          <h1>Recuperar Senha</h1>
+          <p>Informe seu e-mail cadastrado</p>
+        </div>
+        <div id="alertBox" class="alert alert-error" style="display:none;"></div>
+    <!-- estrutura principal da tela -->
+        <div id="successBox" style="display:none;text-align:center;padding:32px 0;">
+    <!-- estrutura principal da tela -->
+          <div style="font-size:60px;margin-bottom:16px;">📧</div>
+    <!-- estrutura principal da tela -->
+          <h3 style="font-size:20px;margin-bottom:8px;">E-mail enviado!</h3>
+          <p style="font-size:14px;color:var(--texto-claro);margin-bottom:24px;">
+            Verifique sua caixa de entrada e siga as instruções para redefinir sua senha.
+          </p>
+          <a href="login.html" class="btn-primary" style="display:inline-flex;width:auto;padding:12px 28px;">Voltar ao login</a>
+        </div>
+        <form id="recuperarForm" novalidate>
+    <!-- formulário principal -->
+          <div class="form-group">
+    <!-- estrutura principal da tela -->
+            <label for="email">E-mail</label>
+            <div class="input-icon">
+    <!-- estrutura principal da tela -->
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+              <input type="email" id="email" placeholder="seu@email.com">
+            </div>
+            <span class="field-error" id="emailError"></span>
+          </div>
+          <button type="submit" class="btn-primary" id="btnRecuperar">
+            <span id="btnText">Enviar instruções</span>
+            <span id="btnSpinner" class="loading-spinner" style="display:none;"></span>
+          </button>
+        </form>
+        <p class="auth-switch" style="margin-top:24px;"><a href="login.html">← Voltar ao login</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="../js/auth.js"></script>
+  <script src="../js/recuperar-senha.js"></script>
+
+
+</body>
+</html>

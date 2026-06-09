@@ -1,0 +1,514 @@
+/* ===== APP SHARED STYLES ===== */
+
+/* STATS GRID */
+.stats-grid {
+    /* animação simples pra deixar mais bonito */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+    /* deixa responsivo em telas menores */
+  background: var(--branco);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--sombra);
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+    /* centraliza os elementos */
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-forte);
+}
+
+.stat-icon {
+    /* deixa responsivo em telas menores */
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.stat-value {
+    /* centraliza os elementos */
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--texto-escuro);
+  line-height: 1;
+}
+
+.stat-label {
+    /* centraliza os elementos */
+  font-size: 12px;
+  color: var(--texto-claro);
+  margin-top: 2px;
+}
+
+/* DASH GRID */
+.dash-grid {
+    /* estilização principal da página */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.dash-card {
+    /* deixa responsivo em telas menores */
+  background: var(--branco);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--sombra);
+}
+
+.dash-card-header {
+    /* centraliza os elementos */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.dash-card-header h3 {
+    /* estilização principal da página */
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--texto-escuro);
+}
+
+.link-ver-mais {
+    /* deixa responsivo em telas menores */
+  font-size: 13px;
+  color: var(--verde-claro);
+  font-weight: 600;
+}
+
+.link-ver-mais:hover {
+    /* estilização principal da página */
+  color: var(--verde-escuro);
+}
+
+/* RECEITAS MINI GRID */
+.receitas-mini-grid {
+    /* centraliza os elementos */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.receita-mini-card {
+    /* animação simples pra deixar mais bonito */
+  background: var(--creme);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.receita-mini-card:hover {
+    /* estilização principal da página */
+  border-color: var(--verde-claro);
+  transform: translateY(-2px);
+}
+
+.receita-mini-emoji {
+    /* centraliza os elementos */
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.receita-mini-titulo {
+    /* deixa responsivo em telas menores */
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--texto-escuro);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.receita-mini-meta {
+    /* deixa responsivo em telas menores */
+  font-size: 12px;
+  color: var(--texto-claro);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.receita-mini-tag {
+    /* animação simples pra deixar mais bonito */
+  background: var(--branco);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  color: var(--verde-escuro);
+  font-weight: 600;
+}
+
+/* DESPENSA LIST */
+.despensa-item-dash {
+    /* centraliza os elementos */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--creme-escuro);
+  font-size: 14px;
+}
+
+.despensa-item-dash:last-child {
+    /* deixa responsivo em telas menores */
+  border-bottom: none;
+}
+
+.despensa-item-name {
+    /* deixa responsivo em telas menores */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: var(--texto-escuro);
+}
+
+.despensa-item-qty {
+    /* deixa responsivo em telas menores */
+  font-size: 13px;
+  color: var(--texto-claro);
+}
+
+/* LISTA COMPRAS RÁPIDA */
+.lista-item-dash {
+    /* estilização principal da página */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--creme-escuro);
+  font-size: 14px;
+}
+
+.lista-item-dash:last-child { border-bottom: none; }
+    /* centraliza os elementos */
+
+.lista-item-dash input[type="checkbox"] {
+    /* animação simples pra deixar mais bonito */
+  width: 16px;
+  height: 16px;
+  accent-color: var(--verde-claro);
+  cursor: pointer;
+}
+
+.lista-item-dash.checked span {
+    /* deixa responsivo em telas menores */
+  text-decoration: line-through;
+  color: var(--texto-claro);
+}
+
+/* LOADING PLACEHOLDER */
+.loading-placeholder {
+    /* estilização principal da página */
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+  color: var(--texto-claro);
+}
+
+/* PAGE HEADER */
+.page-header {
+    /* estilização principal da página */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    /* deixa responsivo em telas menores */
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.search-input-wrap {
+    /* centraliza os elementos */
+  flex: 1;
+  position: relative;
+  min-width: 200px;
+}
+
+.search-input-wrap svg {
+    /* animação simples pra deixar mais bonito */
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--texto-claro);
+  pointer-events: none;
+}
+
+.search-input-wrap input {
+    /* estilização principal da página */
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  background: var(--branco);
+  border: 2px solid var(--creme-escuro);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--texto-escuro);
+  transition: var(--transition);
+}
+
+.search-input-wrap input:focus {
+    /* animação simples pra deixar mais bonito */
+  border-color: var(--verde-claro);
+  box-shadow: 0 0 0 4px rgba(74,140,92,0.1);
+  outline: none;
+}
+
+/* EMPTY STATE */
+.empty-state {
+    /* deixa responsivo em telas menores */
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state .empty-icon {
+    /* animação simples pra deixar mais bonito */
+  font-size: 60px;
+  margin-bottom: 16px;
+}
+
+.empty-state h3 {
+    /* estilização principal da página */
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: var(--texto-escuro);
+}
+
+.empty-state p {
+    /* deixa responsivo em telas menores */
+  font-size: 14px;
+  color: var(--texto-claro);
+  margin-bottom: 24px;
+}
+
+/* RECEITAS GRID (full page) */
+.receitas-grid {
+    /* centraliza os elementos */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.receita-card {
+    /* animação simples pra deixar mais bonito */
+  background: var(--branco);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.receita-card:hover {
+    /* estilização principal da página */
+  box-shadow: var(--sombra-forte);
+  transform: translateY(-3px);
+}
+
+.receita-card-img {
+    /* centraliza os elementos */
+  background: var(--creme-escuro);
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+}
+
+.receita-card-body {
+    /* deixa responsivo em telas menores */
+  padding: 18px;
+}
+
+.receita-card-title {
+    /* deixa responsivo em telas menores */
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--texto-escuro);
+  line-height: 1.3;
+}
+
+.receita-card-tags {
+    /* deixa responsivo em telas menores */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.receita-card-tag {
+    /* centraliza os elementos */
+  font-size: 11px;
+  padding: 3px 8px;
+  background: var(--creme-escuro);
+  color: var(--verde-escuro);
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.receita-card-meta {
+    /* deixa responsivo em telas menores */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--texto-claro);
+}
+
+.receita-card-actions {
+    /* deixa responsivo em telas menores */
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--creme-escuro);
+}
+
+.btn-favoritar {
+    /* deixa responsivo em telas menores */
+  background: none;
+  border: 2px solid var(--creme-escuro);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.btn-favoritar:hover,
+.btn-favoritar.ativo {
+    /* centraliza os elementos */
+  border-color: #e11d48;
+  background: #fff1f2;
+}
+
+.btn-ver-receita {
+    /* deixa responsivo em telas menores */
+  flex: 1;
+  background: var(--verde-escuro);
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-ver-receita:hover {
+    /* animação simples pra deixar mais bonito */
+  background: var(--verde-medio);
+}
+
+/* TABLE */
+.data-table {
+    /* estilização principal da página */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+    /* centraliza os elementos */
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--texto-claro);
+  font-weight: 600;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--creme-escuro);
+}
+
+.data-table td {
+    /* estilização principal da página */
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--texto-escuro);
+  border-bottom: 1px solid var(--creme-escuro);
+  vertical-align: middle;
+}
+
+.data-table tr:last-child td {
+    /* estilização principal da página */
+  border-bottom: none;
+}
+
+.data-table tr:hover td {
+    /* estilização principal da página */
+  background: var(--creme);
+}
+
+/* MOBILE MENU BTN */
+.mobile-menu-btn {
+    /* centraliza os elementos */
+  display: none;
+}
+
+.sidebar-overlay {
+    /* centraliza os elementos */
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 99;
+}
+
+.sidebar-overlay.visible {
+    /* centraliza os elementos */
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    /* animação simples pra deixar mais bonito */
+  .dash-grid { grid-template-columns: 1fr; }
+    /* estilização principal da página */
+  .dash-card[style*="span 2"] { grid-column: span 1 !important; }
+    /* centraliza os elementos */
+  .receitas-mini-grid { grid-template-columns: repeat(2, 1fr); }
+    /* deixa responsivo em telas menores */
+}
+
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    /* deixa responsivo em telas menores */
+  .mobile-menu-btn { display: flex; }
+    /* animação simples pra deixar mais bonito */
+  .receitas-mini-grid { grid-template-columns: 1fr; }
+    /* estilização principal da página */
+}
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr; }
+    /* estilização principal da página */
+}

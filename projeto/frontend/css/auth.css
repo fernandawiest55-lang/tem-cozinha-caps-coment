@@ -1,0 +1,453 @@
+/* ===== AUTH PAGES (LOGIN + CADASTRO) ===== */
+
+.auth-body {
+    /* deixa responsivo em telas menores */
+  background: var(--creme);
+  min-height: 100vh;
+  display: flex;
+}
+
+.auth-layout {
+    /* estilização principal da página */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* LEFT PANEL */
+.auth-left {
+    /* estilização principal da página */
+  background: var(--verde-escuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-left::before {
+    /* deixa responsivo em telas menores */
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+
+.auth-left::after {
+    /* centraliza os elementos */
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 250px;
+  height: 250px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 50%;
+}
+
+.auth-left-content {
+    /* estilização principal da página */
+  max-width: 380px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-logo {
+    /* animação simples pra deixar mais bonito */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--branco);
+  margin-bottom: 40px;
+}
+
+.auth-logo span:first-child {
+    /* deixa responsivo em telas menores */
+  font-size: 30px;
+}
+
+/* Illustration */
+.auth-illustration {
+    /* animação simples pra deixar mais bonito */
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 32px;
+}
+
+.illus-circle {
+    /* deixa responsivo em telas menores */
+  width: 140px;
+  height: 140px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255,255,255,0.15);
+  margin: 10px auto;
+}
+
+.illus-emoji {
+    /* deixa responsivo em telas menores */
+  font-size: 60px;
+}
+
+.illus-float {
+    /* deixa responsivo em telas menores */
+  position: absolute;
+  font-size: 24px;
+  animation: floatAnim 3s ease-in-out infinite;
+}
+
+.fi1 { top: 0; right: 0; animation-delay: 0s; }
+    /* estilização principal da página */
+.fi2 { top: 10px; left: 0; animation-delay: 0.8s; }
+    /* centraliza os elementos */
+.fi3 { bottom: 10px; right: 10px; animation-delay: 1.6s; }
+    /* deixa responsivo em telas menores */
+.fi4 { bottom: 0; left: 10px; animation-delay: 2.4s; }
+    /* animação simples pra deixar mais bonito */
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+    /* deixa responsivo em telas menores */
+  50% { transform: translateY(-8px); }
+    /* animação simples pra deixar mais bonito */
+}
+
+.auth-left-title {
+    /* deixa responsivo em telas menores */
+  font-size: 28px;
+  color: var(--branco);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.auth-left-desc {
+    /* centraliza os elementos */
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-features {
+    /* centraliza os elementos */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-feat {
+    /* animação simples pra deixar mais bonito */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.07);
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+/* RIGHT PANEL */
+.auth-right {
+    /* animação simples pra deixar mais bonito */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 56px;
+  background: var(--creme);
+}
+
+.auth-form-wrapper {
+    /* animação simples pra deixar mais bonito */
+  max-width: 420px;
+  width: 100%;
+  animation: fadeIn 0.4s ease;
+}
+
+.auth-header {
+    /* centraliza os elementos */
+  margin-bottom: 32px;
+}
+
+.auth-header h1 {
+    /* centraliza os elementos */
+  font-size: 32px;
+  color: var(--texto-escuro);
+  margin-bottom: 6px;
+}
+
+.auth-header p {
+    /* animação simples pra deixar mais bonito */
+  font-size: 15px;
+  color: var(--texto-claro);
+}
+
+/* Form Options */
+.form-options {
+    /* centraliza os elementos */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.checkbox-label {
+    /* estilização principal da página */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--texto-medio);
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    /* centraliza os elementos */
+  width: 16px;
+  height: 16px;
+  accent-color: var(--verde-claro);
+  cursor: pointer;
+}
+
+.link-forgot {
+    /* estilização principal da página */
+  font-size: 14px;
+  color: var(--verde-claro);
+  font-weight: 600;
+}
+
+.link-forgot:hover {
+    /* deixa responsivo em telas menores */
+  color: var(--verde-escuro);
+}
+
+/* Toggle senha */
+.toggle-senha {
+    /* animação simples pra deixar mais bonito */
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--texto-claro);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-senha:hover {
+    /* centraliza os elementos */
+  color: var(--verde-escuro);
+}
+
+.input-icon {
+    /* centraliza os elementos */
+  position: relative;
+}
+
+.input-icon svg:first-child {
+    /* centraliza os elementos */
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--texto-claro);
+  pointer-events: none;
+}
+
+.input-icon input {
+    /* deixa responsivo em telas menores */
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
+/* Field errors */
+.field-error {
+    /* estilização principal da página */
+  display: block;
+  font-size: 12px;
+  color: #c0392b;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+/* Auth switch link */
+.auth-switch {
+    /* centraliza os elementos */
+  text-align: center;
+  font-size: 14px;
+  color: var(--texto-medio);
+}
+
+.auth-switch a {
+    /* animação simples pra deixar mais bonito */
+  color: var(--verde-claro);
+  font-weight: 600;
+}
+
+.auth-switch a:hover {
+    /* estilização principal da página */
+  color: var(--verde-escuro);
+}
+
+/* Progress steps (cadastro) */
+.cadastro-steps {
+    /* centraliza os elementos */
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 32px;
+}
+
+.cad-step {
+    /* estilização principal da página */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.cad-step-num {
+    /* animação simples pra deixar mais bonito */
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--creme-escuro);
+  color: var(--texto-claro);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.cad-step-label {
+    /* deixa responsivo em telas menores */
+  font-size: 12px;
+  color: var(--texto-claro);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.cad-step.active .cad-step-num {
+    /* centraliza os elementos */
+  background: var(--verde-escuro);
+  color: var(--branco);
+}
+
+.cad-step.active .cad-step-label {
+    /* deixa responsivo em telas menores */
+  color: var(--verde-escuro);
+  font-weight: 600;
+}
+
+.cad-step.done .cad-step-num {
+    /* animação simples pra deixar mais bonito */
+  background: var(--verde-accent);
+  color: var(--branco);
+}
+
+.cad-step-line {
+    /* estilização principal da página */
+  flex: 1;
+  height: 2px;
+  background: var(--creme-escuro);
+  margin: 0 8px;
+  transition: var(--transition);
+}
+
+.cad-step-line.done {
+    /* estilização principal da página */
+  background: var(--verde-accent);
+}
+
+/* Step panels */
+.step-panel {
+    /* centraliza os elementos */
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.step-panel.active {
+    /* deixa responsivo em telas menores */
+  display: block;
+}
+
+/* Restriction chips */
+.chips-grid {
+    /* animação simples pra deixar mais bonito */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.chip {
+    /* deixa responsivo em telas menores */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 2px solid var(--creme-escuro);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--texto-medio);
+  transition: var(--transition);
+  background: var(--branco);
+}
+
+.chip:hover {
+    /* estilização principal da página */
+  border-color: var(--verde-claro);
+  background: #f0fdf4;
+}
+
+.chip.selected {
+    /* centraliza os elementos */
+  border-color: var(--verde-escuro);
+  background: var(--verde-escuro);
+  color: var(--branco);
+}
+
+.chip .chip-icon {
+    /* animação simples pra deixar mais bonito */
+  font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .auth-layout {
+    /* centraliza os elementos */
+    grid-template-columns: 1fr;
+  }
+  .auth-left {
+    /* estilização principal da página */
+    display: none;
+  }
+  .auth-right {
+    /* animação simples pra deixar mais bonito */
+    padding: 32px 24px;
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+}

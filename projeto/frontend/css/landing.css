@@ -1,0 +1,776 @@
+/* ===== LANDING PAGE STYLES ===== */
+
+.landing-body {
+    /* deixa responsivo em telas menores */
+  background: var(--creme);
+}
+
+/* NAVBAR */
+.navbar {
+    /* animação simples pra deixar mais bonito */
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(250, 246, 240, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--creme-escuro);
+}
+
+.nav-container {
+    /* estilização principal da página */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+    /* centraliza os elementos */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+    /* animação simples pra deixar mais bonito */
+  font-size: 28px;
+}
+
+.nav-logo .logo-text {
+    /* animação simples pra deixar mais bonito */
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--verde-escuro);
+}
+
+.nav-links {
+    /* deixa responsivo em telas menores */
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+    /* estilização principal da página */
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--texto-medio);
+}
+
+.nav-links a:hover {
+    /* deixa responsivo em telas menores */
+  color: var(--verde-escuro);
+}
+
+.btn-nav-login {
+    /* deixa responsivo em telas menores */
+  padding: 8px 20px;
+  border: 2px solid var(--verde-escuro);
+  border-radius: 8px;
+  color: var(--verde-escuro) !important;
+  font-weight: 600 !important;
+}
+
+.btn-nav-login:hover {
+    /* deixa responsivo em telas menores */
+  background: var(--verde-escuro);
+  color: var(--branco) !important;
+}
+
+.btn-nav-cad {
+    /* animação simples pra deixar mais bonito */
+  padding: 10px 22px;
+  background: var(--laranja);
+  color: var(--branco) !important;
+  border-radius: 8px;
+  font-weight: 600 !important;
+}
+
+.btn-nav-cad:hover {
+    /* animação simples pra deixar mais bonito */
+  background: var(--laranja-claro);
+}
+
+.nav-mobile-btn {
+    /* animação simples pra deixar mais bonito */
+  display: none;
+  background: none;
+  border: none;
+  color: var(--verde-escuro);
+  padding: 4px;
+}
+
+/* HERO */
+.hero {
+    /* estilização principal da página */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 32px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-badge {
+    /* deixa responsivo em telas menores */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--creme-escuro);
+  color: var(--verde-escuro);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  border: 1px solid rgba(74, 140, 92, 0.2);
+}
+
+.hero-title {
+    /* estilização principal da página */
+  font-size: 52px;
+  line-height: 1.1;
+  color: var(--texto-escuro);
+  margin-bottom: 20px;
+}
+
+.hero-accent {
+    /* animação simples pra deixar mais bonito */
+  color: var(--verde-claro);
+}
+
+.hero-desc {
+    /* animação simples pra deixar mais bonito */
+  font-size: 17px;
+  color: var(--texto-medio);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+
+.hero-ctas {
+    /* animação simples pra deixar mais bonito */
+  display: flex;
+  gap: 14px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+    /* deixa responsivo em telas menores */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--verde-escuro);
+  color: var(--branco);
+  padding: 16px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.btn-hero-primary:hover {
+    /* animação simples pra deixar mais bonito */
+  background: var(--verde-medio);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(26, 58, 42, 0.25);
+}
+
+.btn-hero-secondary {
+    /* centraliza os elementos */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--verde-escuro);
+  padding: 16px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid var(--verde-escuro);
+  transition: var(--transition);
+}
+
+.btn-hero-secondary:hover {
+    /* animação simples pra deixar mais bonito */
+  background: var(--verde-escuro);
+  color: var(--branco);
+}
+
+.hero-stats {
+    /* estilização principal da página */
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.stat {
+    /* deixa responsivo em telas menores */
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-num {
+    /* estilização principal da página */
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--verde-escuro);
+}
+
+.stat-label {
+    /* animação simples pra deixar mais bonito */
+  font-size: 13px;
+  color: var(--texto-claro);
+}
+
+.stat-divider {
+    /* estilização principal da página */
+  width: 1px;
+  height: 36px;
+  background: var(--creme-escuro);
+}
+
+/* HERO VISUAL */
+.hero-visual {
+    /* animação simples pra deixar mais bonito */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.phone-mockup {
+    /* deixa responsivo em telas menores */
+  width: 300px;
+  background: var(--verde-escuro);
+  border-radius: 40px;
+  padding: 16px;
+  box-shadow: 0 32px 80px rgba(26, 58, 42, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.phone-screen {
+    /* estilização principal da página */
+  background: var(--creme);
+  border-radius: 28px;
+  padding: 20px 16px;
+  min-height: 480px;
+}
+
+.phone-header {
+    /* animação simples pra deixar mais bonito */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--verde-escuro);
+}
+
+.phone-badge {
+    /* centraliza os elementos */
+  background: var(--verde-accent);
+  color: var(--verde-escuro);
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.phone-greeting {
+    /* deixa responsivo em telas menores */
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--texto-escuro);
+  margin-bottom: 4px;
+}
+
+.phone-subtitle {
+    /* deixa responsivo em telas menores */
+  font-size: 12px;
+  color: var(--texto-claro);
+  margin-bottom: 16px;
+}
+
+.recipe-card-mini {
+    /* estilização principal da página */
+  background: var(--branco);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.recipe-mini-img {
+    /* animação simples pra deixar mais bonito */
+  font-size: 28px;
+  width: 44px;
+  height: 44px;
+  background: var(--creme-escuro);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.recipe-mini-title {
+    /* animação simples pra deixar mais bonito */
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--texto-escuro);
+  margin-bottom: 4px;
+}
+
+.recipe-mini-tags {
+    /* deixa responsivo em telas menores */
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.recipe-mini-tags span {
+    /* estilização principal da página */
+  font-size: 10px;
+  background: var(--creme-escuro);
+  color: var(--verde-escuro);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.recipe-mini-time {
+    /* centraliza os elementos */
+  font-size: 11px;
+  color: var(--texto-claro);
+}
+
+.phone-ingredients {
+    /* deixa responsivo em telas menores */
+  background: var(--verde-escuro);
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.ingr-title {
+    /* centraliza os elementos */
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ingr-tags {
+    /* centraliza os elementos */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ingr-tags span {
+    /* animação simples pra deixar mais bonito */
+  font-size: 11px;
+  background: rgba(255,255,255,0.15);
+  color: var(--branco);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* FLOATING CARDS */
+.floating-card {
+    /* estilização principal da página */
+  position: absolute;
+  background: var(--branco);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  animation: floatAnim 3s ease-in-out infinite;
+}
+
+.fc1 {
+    /* animação simples pra deixar mais bonito */
+  top: 40px;
+  right: -20px;
+  animation-delay: 0s;
+}
+
+.fc2 {
+    /* centraliza os elementos */
+  bottom: 120px;
+  right: -30px;
+  animation-delay: 1s;
+}
+
+.fc3 {
+    /* animação simples pra deixar mais bonito */
+  bottom: 80px;
+  left: -20px;
+  animation-delay: 2s;
+}
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+    /* deixa responsivo em telas menores */
+  50% { transform: translateY(-8px); }
+    /* animação simples pra deixar mais bonito */
+}
+
+/* SECTION COMMON */
+.section-container {
+    /* animação simples pra deixar mais bonito */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 32px;
+}
+
+.section-header {
+    /* centraliza os elementos */
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-badge {
+    /* deixa responsivo em telas menores */
+  display: inline-block;
+  background: var(--creme-escuro);
+  color: var(--verde-escuro);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.section-title {
+    /* centraliza os elementos */
+  font-size: 40px;
+  color: var(--texto-escuro);
+  margin-bottom: 12px;
+}
+
+.section-desc {
+    /* animação simples pra deixar mais bonito */
+  font-size: 16px;
+  color: var(--texto-claro);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* STEPS */
+.como-funciona {
+    /* animação simples pra deixar mais bonito */
+  background: var(--branco);
+}
+
+.steps-grid {
+    /* animação simples pra deixar mais bonito */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.step-card {
+    /* centraliza os elementos */
+  position: relative;
+  padding: 28px 24px;
+  border-radius: var(--radius);
+  background: var(--creme);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.step-card:hover {
+    /* deixa responsivo em telas menores */
+  background: var(--verde-escuro);
+  color: var(--branco);
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-forte);
+}
+
+.step-card:hover p {
+    /* centraliza os elementos */
+  color: rgba(255,255,255,0.7);
+}
+
+.step-num {
+    /* centraliza os elementos */
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--creme-escuro);
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  line-height: 1;
+  transition: var(--transition);
+}
+
+.step-card:hover .step-num {
+    /* centraliza os elementos */
+  color: rgba(255,255,255,0.1);
+}
+
+.step-icon {
+    /* centraliza os elementos */
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.step-card h3 {
+    /* deixa responsivo em telas menores */
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: var(--texto-escuro);
+  transition: var(--transition);
+}
+
+.step-card:hover h3 {
+    /* centraliza os elementos */
+  color: var(--branco);
+}
+
+.step-card p {
+    /* centraliza os elementos */
+  font-size: 14px;
+  color: var(--texto-claro);
+  line-height: 1.6;
+  transition: var(--transition);
+}
+
+/* FEATURES */
+.features-grid {
+    /* centraliza os elementos */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+    /* animação simples pra deixar mais bonito */
+  background: var(--branco);
+  border-radius: var(--radius);
+  padding: 24px;
+  border: 2px solid var(--creme-escuro);
+  transition: var(--transition);
+  position: relative;
+}
+
+.feature-card:hover {
+    /* estilização principal da página */
+  border-color: var(--verde-claro);
+  transform: translateY(-2px);
+  box-shadow: var(--sombra);
+}
+
+.feat-destaque {
+    /* deixa responsivo em telas menores */
+  background: var(--verde-escuro);
+  color: var(--branco);
+  border-color: var(--verde-escuro);
+  grid-column: span 2;
+}
+
+.feat-destaque p {
+    /* centraliza os elementos */
+  color: rgba(255,255,255,0.7);
+}
+
+.feat-tag {
+    /* centraliza os elementos */
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--laranja);
+  color: var(--branco);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.feat-icon {
+    /* centraliza os elementos */
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.feature-card h3 {
+    /* deixa responsivo em telas menores */
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--texto-escuro);
+}
+
+.feat-destaque h3 {
+    /* estilização principal da página */
+  color: var(--branco);
+  font-size: 20px;
+}
+
+.feature-card p {
+    /* centraliza os elementos */
+  font-size: 14px;
+  color: var(--texto-claro);
+  line-height: 1.6;
+}
+
+/* CTA */
+.cta-section {
+    /* estilização principal da página */
+  background: var(--verde-escuro);
+  padding: 80px 32px;
+  text-align: center;
+}
+
+.cta-content h2 {
+    /* deixa responsivo em telas menores */
+  font-size: 44px;
+  color: var(--branco);
+  margin-bottom: 12px;
+}
+
+.cta-content p {
+    /* estilização principal da página */
+  font-size: 17px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 36px;
+}
+
+.cta-btns {
+    /* deixa responsivo em telas menores */
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-cta-primary {
+    /* centraliza os elementos */
+  padding: 16px 32px;
+  background: var(--laranja);
+  color: var(--branco);
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.btn-cta-primary:hover {
+    /* animação simples pra deixar mais bonito */
+  background: var(--laranja-claro);
+  transform: translateY(-2px);
+}
+
+.btn-cta-secondary {
+    /* estilização principal da página */
+  padding: 16px 32px;
+  background: transparent;
+  color: var(--branco);
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid rgba(255,255,255,0.4);
+  transition: var(--transition);
+}
+
+.btn-cta-secondary:hover {
+    /* animação simples pra deixar mais bonito */
+  border-color: var(--branco);
+  background: rgba(255,255,255,0.1);
+}
+
+/* FOOTER */
+.footer {
+    /* centraliza os elementos */
+  background: #0f2318;
+  padding: 28px 32px;
+}
+
+.footer-content {
+    /* deixa responsivo em telas menores */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-logo {
+    /* estilização principal da página */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--branco);
+}
+
+.footer-content p {
+    /* centraliza os elementos */
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .steps-grid,
+  .features-grid {
+    /* centraliza os elementos */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feat-destaque {
+    /* estilização principal da página */
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    /* deixa responsivo em telas menores */
+    grid-template-columns: 1fr;
+    padding: 48px 20px 60px;
+    text-align: center;
+  }
+  .hero-title { font-size: 36px; }
+    /* animação simples pra deixar mais bonito */
+  .hero-ctas { justify-content: center; }
+    /* estilização principal da página */
+  .hero-stats { justify-content: center; }
+    /* centraliza os elementos */
+  .hero-visual { display: none; }
+    /* deixa responsivo em telas menores */
+  .nav-links { display: none; }
+    /* animação simples pra deixar mais bonito */
+  .nav-mobile-btn { display: flex; }
+    /* estilização principal da página */
+  .steps-grid,
+  .features-grid { grid-template-columns: 1fr; }
+    /* deixa responsivo em telas menores */
+  .section-title { font-size: 28px; }
+    /* animação simples pra deixar mais bonito */
+  .hero-desc { font-size: 15px; }
+    /* estilização principal da página */
+}

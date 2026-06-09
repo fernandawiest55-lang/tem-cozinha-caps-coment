@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <display-name>Tem na Cozinha API</display-name>
+    <description>Backend Java puro para o app Tem na Cozinha</description>
+
+    <!-- ================================================
+         SERVLETS
+         ================================================ -->
+    <servlet>
+        <servlet-name>UsuarioController</servlet-name>
+        <servlet-class>controle.UsuarioController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/api/usuarios/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>IngredienteController</servlet-name>
+        <servlet-class>controle.IngredienteControle</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IngredienteController</servlet-name>
+        <url-pattern>/api/ingredientes/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReceitaController</servlet-name>
+        <servlet-class>controle.ReceitaController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReceitaController</servlet-name>
+        <url-pattern>/api/receitas/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FavoritoController</servlet-name>
+        <servlet-class>controle.FavoritoController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FavoritoController</servlet-name>
+        <url-pattern>/api/favoritos/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HistoricoController</servlet-name>
+        <servlet-class>controle.HistoricoController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HistoricoController</servlet-name>
+        <url-pattern>/api/historico/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AvaliacaoController</servlet-name>
+        <servlet-class>controle.AvaliacaoController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AvaliacaoController</servlet-name>
+        <url-pattern>/api/avaliacoes/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListaComprasController</servlet-name>
+        <servlet-class>controle.ListaComprasController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListaComprasController</servlet-name>
+        <url-pattern>/api/lista-compras/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- ================================================
+         FILTROS
+         ================================================ -->
+    <filter>
+        <filter-name>CorsFilter</filter-name>
+        <filter-class>controle.CorsFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CorsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>controle.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/api/*</url-pattern>
+    </filter-mapping>
+
+    <!-- ================================================
+         CONFIGURAÇÃO GERAL
+         ================================================ -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/api/not-found</location>
+    </error-page>
+
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+
+</web-app>

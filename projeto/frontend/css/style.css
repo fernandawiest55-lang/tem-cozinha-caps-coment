@@ -1,0 +1,204 @@
+*{
+    /* estilização principal da página */
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    /* deixa responsivo em telas menores */
+    font-family:Arial;
+    background:#111827;
+    color:white;
+}
+
+.navbar{
+    /* estilização principal da página */
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 60px;
+
+    background:#1f2937;
+}
+
+.logo{
+    /* deixa responsivo em telas menores */
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    /* animação simples pra deixar mais bonito */
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    /* centraliza os elementos */
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:100px 60px;
+}
+
+.hero-text{
+    /* centraliza os elementos */
+    max-width:500px;
+}
+
+.hero-text h1{
+    /* centraliza os elementos */
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    /* deixa responsivo em telas menores */
+    margin-bottom:20px;
+    color:#d1d5db;
+}
+
+.hero button{
+    /* animação simples pra deixar mais bonito */
+    padding:15px 25px;
+
+    background:#10b981;
+
+    border:none;
+
+    color:white;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+.hero-image{
+    /* centraliza os elementos */
+    font-size:100px;
+}
+
+.features{
+    /* centraliza os elementos */
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(200px,1fr));
+
+    gap:20px;
+
+    padding:60px;
+}
+
+.feature-card{
+    /* estilização principal da página */
+    background:#1f2937;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+}
+
+.recipes{
+    /* deixa responsivo em telas menores */
+    padding:60px;
+}
+
+.recipe-grid{
+    /* deixa responsivo em telas menores */
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+    margin-top:30px;
+}
+
+.recipe-card{
+    /* centraliza os elementos */
+    background:#1f2937;
+
+    padding:25px;
+
+    border-radius:20px;
+}
+
+.auth-section{
+    /* centraliza os elementos */
+    display:flex;
+    justify-content:center;
+
+    padding:80px 20px;
+}
+
+.auth-card{
+    /* estilização principal da página */
+    background:#1f2937;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    width:400px;
+}
+
+.auth-card h2{
+    /* deixa responsivo em telas menores */
+    margin-bottom:20px;
+}
+
+.auth-card input{
+    /* deixa responsivo em telas menores */
+    width:100%;
+
+    padding:14px;
+
+    margin-top:10px;
+
+    border:none;
+
+    border-radius:10px;
+}
+
+.auth-card button{
+    /* deixa responsivo em telas menores */
+    width:100%;
+
+    padding:14px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#10b981;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.login-btn{
+    /* estilização principal da página */
+    background:#2563eb !important;
+}
+
+footer{
+    /* estilização principal da página */
+    text-align:center;
+
+    padding:30px;
+
+    background:#1f2937;
+
+    margin-top:40px;
+}
