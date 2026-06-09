@@ -1,7 +1,7 @@
 # 🍳 Tem na Cozinha
 
 **Equipe:** The Furious Five | Jala University  
-**Stack:** HTML/CSS/JS · Java puro · PostgreSQL · Apache Tomcat · Gemini AI
+**Stack:** HTML/CSS/JS · Java · PostgreSQL · API  Gemini AI
 
 > Aplicativo que sugere receitas personalizadas com base nos ingredientes que o usuario ja tem em casa.
 
