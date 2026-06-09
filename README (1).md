@@ -73,74 +73,7 @@ tem-na-cozinha/
     └── schema.sql                   ← Tabelas + dados de exemplo
 ```
 
----
-
-## ⚙️ Como Configurar
-
-### 1. Banco de Dados
-
-Crie o banco no PostgreSQL:
-
-```bash
-createdb tem_na_cozinha
-psql -d tem_na_cozinha -f database/schema.sql
-```
-
-Se preferir pelo pgAdmin: botao direito em **Databases** → **Create** → **Database** → nome `tem_na_cozinha` → depois abra o Query Tool e cole o conteudo do `schema.sql`.
-
-Edite as credenciais em `backend/src/config/ConnectionFactory.java`:
-
-```java
-private static final String URL     = "jdbc:postgresql://localhost:5432/tem_na_cozinha";
-private static final String USUARIO = "postgres";
-private static final String SENHA   = "123456";
-```
-
-### 2. Backend no IntelliJ + Tomcat
-
-**Dependencias necessarias:**
-
-Adicione em `File → Project Structure → Libraries`:
-- `postgresql-42.x.x.jar` — driver JDBC do PostgreSQL
-- `javax.servlet-api-4.0.1` — busque no Maven: `javax.servlet:javax.servlet-api:4.0.1`
-
-**Chave da API Gemini:**
-
-A chave fica no topo do `ReceitaController.java`:
-
-```java
-private static final String CHAVE_GEMINI = "sua-chave-aqui";
-```
-
-Gere sua chave em: https://aistudio.google.com/app/apikey
-
-**Rodar:**
-
-Configure o Tomcat no IntelliJ (`Run → Edit Configurations → Tomcat`) e clique em Run. A API sobe em `http://localhost:8080/api`.
-
-### 3. Frontend
-
-Abra qualquer pagina diretamente no navegador:
-
-```
-frontend/pages/index.html
-```
-
-Ou rode um servidor local:
-
-```bash
-cd frontend && python3 -m http.server 3000
-```
-
-Acesse: `http://localhost:3000/pages/index.html`
-
----
-
-## 🔌 Endpoints da API
-
-Todas as rotas exceto login, cadastro e recuperar-senha exigem o header:
-```
-Authorization: Bearer <token>
+## MÉTODO USADO
 ```
 
 | Método | Rota | Descricao |
